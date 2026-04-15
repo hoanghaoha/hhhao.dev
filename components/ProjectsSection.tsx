@@ -8,24 +8,32 @@ type Props = {}
 
 const ProjectsSection = (props: Props) => {
   return (
-    <div className="flex flex-col px-100 py-10 gap-10">
-      <h1 className="text-4xl font-semibold">Projects</h1>
+    <div className="flex flex-col px-6 md:px-20 lg:px-40 py-10 gap-10 mt-10 max-w-5xl mx-auto w-full">
+      <h1 className="text-3xl md:text-4xl font-semibold">Projects</h1>
       <div className="flex flex-col gap-5">
         {PROJECTS.map((project, index) => (
           <Item key={index} variant={"outline"}>
             <ItemContent>
-              <ItemTitle className="text-lg">{project.name}</ItemTitle>
+              <div className="flex items-center gap-2 flex-wrap">
+                <ItemTitle className="text-lg">{project.name}</ItemTitle>
+                <Badge
+                  variant={project.status === "live" ? "default" : "secondary"}
+                  className="text-xs"
+                >
+                  {project.status === "live" ? "live" : "wip"}
+                </Badge>
+              </div>
               <ItemDescription className="text-sm">{project.description}</ItemDescription>
             </ItemContent>
             <ItemActions>
               <Button size="sm" variant="outline" asChild>
-                <Link href={project.github} target="_blank">
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   View
                 </Link>
               </Button>
             </ItemActions>
             <ItemFooter>
-              <div className="flex items-center gap-2 w-fit">
+              <div className="flex flex-wrap items-center gap-2 w-fit">
                 {project.tags.map((tag) => {
                   const Icon = TAG_ICONS[tag]
                   return (
