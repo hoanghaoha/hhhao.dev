@@ -21,7 +21,7 @@ export default function Page() {
         <ExperiencesSection />
       </section>
       <Separator />
-      <section id="contact" className="scroll-mt-20 w-full">
+      <section id="footer" className="scroll-mt-20 w-full">
         <Footer />
       </section>
     </div>

@@ -25,7 +25,14 @@ const Footer = (props: Props) => {
           </a>
         </Button>
       </div>
-      <a href="https://github.com/hoanghaoha/hhhao.dev" target="_blank" rel="noopener noreferrer" className="text-sm font-light hover:text-primary hover:underline transition-colors">This site is open source</a>
+      <a href={"https://github.com/hoanghaoha/hhhao.dev"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+      >
+        <IconBrandGithub size={14} />
+        This site is open source
+      </a>
     </div>
   )
 }

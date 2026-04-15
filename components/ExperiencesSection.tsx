@@ -13,7 +13,7 @@ const ExperiencesSection = (props: Props) => {
             <p>
               <a href={exp.company_link} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary transition-colors">{exp.company}</a> - {exp.role}
             </p>
-            <p className="text-sm text-muted-foreground">{exp.period}</p>
+            <p className="text-xs text-muted-foreground">{exp.period}</p>
             <p className="text-sm">{exp.description}</p>
             <div className="flex flex-wrap items-center gap-2 pt-2">
               {exp.skills.map(skill => {

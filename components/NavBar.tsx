@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NAV_LINKS } from "@/lib/consts"
+import { NAV_LINKS, SITE } from "@/lib/consts"
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
@@ -18,10 +18,10 @@ const NavBar = () => {
             </Button>
           ) : (
             <Button key={item.label} variant="default" asChild>
-              <Link href={item.href} className="flex items-center gap-1">
+              <a href={`mailto:${SITE.email}`}>
                 {item.label}
-                <ArrowRight size={14} />
-              </Link>
+                <ArrowRight />
+              </a>
             </Button>
           )
         )}

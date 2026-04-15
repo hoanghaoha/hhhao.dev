@@ -1,28 +1,23 @@
 import {
-  IconBrandPython,
-  IconBrandJavascript,
-  IconBrandTypescript,
-  IconLetterR,
   IconTerminal2,
-  IconDatabase,
-  IconDatabaseCog,
   IconTable,
-  IconChartBar,
   IconChartHistogram,
-  IconBrandNextjs,
-  IconBrandSpeedtest,
-  IconBrandDocker,
   IconBrain,
   IconRobot,
-  IconBrandGithub,
   type Icon as TablerIcon,
+  IconChartArea,
+  IconChartBar,
+  IconDatabase,
 } from "@tabler/icons-react";
+
+import type { IconType } from "react-icons"
+import { SiDocker, SiFastapi, SiGithub, SiJavascript, SiNextdotjs, SiPandas, SiPolars, SiPostgresql, SiPowers, SiPython, SiR, SiSqlite, SiTypescript } from "react-icons/si";
 
 export const SITE = {
   name: "Ha Hoang Hao",
   title: "Data & Research Analyst · Python Developer",
   description:
-    "I analyze complex data, build automated pipelines, and develop Python tools that make data workflows faster and more reliable.",
+    "I analyze complex data to surface insights that drive decisions — and build tools that turn analysis into repeatable workflows.",
   email: "me@hhhao.dev",
   github: "https://github.com/hoanghaoha",
   linkedin: "https://linkedin.com/in/hoanghaoha",
@@ -30,24 +25,28 @@ export const SITE = {
   location: "Ho Chi Minh City, Vietnam",
 };
 
-export const TAG_ICONS: Record<string, TablerIcon> = {
-  Python: IconBrandPython,
-  JavaScript: IconBrandJavascript,
-  TypeScript: IconBrandTypescript,
-  R: IconLetterR,
-  Bash: IconTerminal2,
+
+export type AnyIcon = IconType | TablerIcon
+
+export const TAG_ICONS: Record<string, AnyIcon> = {
+  Python: SiPython,
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  R: SiR,
+  "Next.js": SiNextdotjs,
+  FastAPI: SiFastapi,
+  Docker: SiDocker,
+  Polars: SiPolars,
+  Pandas: SiPandas,
+  GitHub: SiGithub,
   SQL: IconDatabase,
+  PowerBI: IconChartBar,
   DAX: IconTable,
-  "PowerBI": IconChartBar,
   SPSS: IconChartHistogram,
-  "Next.js": IconBrandNextjs,
-  FastAPI: IconBrandSpeedtest,
-  Docker: IconBrandDocker,
-  Polars: IconDatabaseCog,
+  Bash: IconTerminal2,
   AI: IconBrain,
   LLM: IconRobot,
-  GitHub: IconBrandGithub,
-};
+}
 
 export const PROJECTS = [
   {
@@ -55,7 +54,7 @@ export const PROJECTS = [
     description:
       "Open source Python library for automated data processing and transformation. Handles cleaning, validation, and normalization with a consistent, scriptable API.",
     github: "https://github.com/hoanghaoha/survy",
-    tags: ["Python"],
+    tags: ["Python", "Polars"],
     status: "live" as const,
   },
   {
@@ -89,19 +88,17 @@ export const EXPERIENCES = [
     role: "Quantitative Research Executive",
     company: "Insight Asia",
     company_link: "https://insightasia.com/",
-    period: "2022 — 2024",
-    description:
-      "Owned end-to-end data processing workflows for large-scale research projects. Built automated pipelines and worked across Python, SPSS, SQL, and Power BI to deliver clean, analysis-ready datasets.",
-    skills: ["Python", "SPSS", "SQL", "PowerBI"]
+    period: "2024 — 2026",
+    description: "This is where I learned what survey data really looks like at scale — and how painful it is to process without the right tools. I owned the data side of the pipeline: from questionnaire programming through to cleaning, analysis, and dashboards. Every project had its own schema, its own quirks, its own manual steps that nobody had ever bothered to fix. That friction is what eventually became survy — a library I built to automate the parts of the workflow I found myself repeating across every single project.",
+    skills: ["Python", "Pandas", "Polars", "SPSS", "SQL", "PowerBI"]
   },
   {
     role: "Data & Research Analyst",
     company: "Deli",
     company_link: "https://www.deliworld.com/",
-    period: "2020 — 2022",
-    description:
-      "Processed and analyzed structured research datasets, built reporting workflows, and delivered insights for client-facing projects.",
-    skills: ["Python", "SQL", "PowerBI"]
+    period: "2022 — 2024",
+    description: "My first job out of university. I spent two years close to the business — tracking sales performance, mapping trends across regions and product lines, and gathering ground-level feedback from sales reps, distributors, and end users to inform product decisions. It taught me how real data looks: messy, inconsistent, and nothing like textbook examples. That's also where I learned that the most valuable thing you can do with data isn't the analysis — it's removing the manual work standing between raw data and insight.",
+    skills: ["Python", "Pandas", "SQL", "PowerBI"]
   },
 ];
 
