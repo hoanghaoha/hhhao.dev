@@ -55,7 +55,7 @@ export const PROJECTS = [
     name: "survy",
     description:
       "Open source Python library for automated survey data processing, transformation and analysis with a clean, scriptable API. Shipping with AI integration extension - enable LLM-powered data analyzing workflows using the agent skills pattern.",
-    link: "https://github.com/hoanghaoha/survy",
+    link: "https://survy.hhhao.dev",
     tags: ["Python", "Polars", "AI", "SPSS", "PyPI", "Github Actions"],
     status: "live" as const,
   },
