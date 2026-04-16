@@ -5,13 +5,12 @@ import {
   IconBrain,
   IconRobot,
   type Icon as TablerIcon,
-  IconChartArea,
   IconChartBar,
   IconDatabase,
 } from "@tabler/icons-react";
 
 import type { IconType } from "react-icons"
-import { SiDocker, SiFastapi, SiGithub, SiJavascript, SiNextdotjs, SiPandas, SiPolars, SiPostgresql, SiPowers, SiPython, SiR, SiSqlite, SiTypescript } from "react-icons/si";
+import { SiDocker, SiFastapi, SiGithub, SiGithubactions, SiJavascript, SiNextdotjs, SiPandas, SiPolars, SiPypi, SiPython, SiR, SiShadcnui, SiTypescript } from "react-icons/si";
 
 export const SITE = {
   name: "Ha Hoang Hao",
@@ -39,6 +38,9 @@ export const TAG_ICONS: Record<string, AnyIcon> = {
   Polars: SiPolars,
   Pandas: SiPandas,
   GitHub: SiGithub,
+  Shadcn: SiShadcnui,
+  PyPI: SiPypi,
+  "Github Actions": SiGithubactions,
   SQL: IconDatabase,
   PowerBI: IconChartBar,
   DAX: IconTable,
@@ -52,24 +54,16 @@ export const PROJECTS = [
   {
     name: "survy",
     description:
-      "Open source Python library for automated data processing and transformation. Handles cleaning, validation, and normalization with a consistent, scriptable API.",
-    github: "https://github.com/hoanghaoha/survy",
-    tags: ["Python", "Polars"],
-    status: "live" as const,
-  },
-  {
-    name: "survy-agent-skills",
-    description:
-      "AI integration extension for the survy ecosystem. Enables LLM-powered data processing workflows using the agent skills pattern.",
-    github: "https://github.com/hoanghaoha/survy-agent-skills",
-    tags: ["Python", "AI"],
+      "Open source Python library for automated survey data processing, transformation and analysis with a clean, scriptable API. Shipping with AI integration extension - enable LLM-powered data analyzing workflows using the agent skills pattern.",
+    link: "https://github.com/hoanghaoha/survy",
+    tags: ["Python", "Polars", "AI", "SPSS", "PyPI", "Github Actions"],
     status: "live" as const,
   },
   {
     name: "surveydb",
     description:
-      "A standalone Python + PostgreSQL storage engine for survey data. Ingests any project as standardized CSV files and normalizes it into a unified, queryable database — enabling cross-project analysis that was previously impossible without manual work.",
-    github: "https://github.com/hoanghaoha/surveydb",
+      "A standalone Python + SQL storage engine for survey data. Ingests any project as standardized CSV files and normalizes it into a unified, queryable database — enabling cross-project analysis that was previously impossible without manual work.",
+    link: "https://github.com/hoanghaoha/surveydb",
     tags: ["Python", "Polars", "SQL", "PowerBI", "Docker"],
     status: "wip" as const,
   },
@@ -77,28 +71,26 @@ export const PROJECTS = [
     name: "hhhao.dev",
     description:
       "The site you're viewing here.",
-    github: "https://github.com/hoanghaoha/hhhao.dev",
-    tags: ["Next.js"],
+    link: "https://github.com/hoanghaoha/hhhao.dev",
+    tags: ["Next.js", "Shadcn"],
     status: "live" as const,
   },
 ];
 
-export const EXPERIENCES = [
+export const STORY = [
   {
     role: "Quantitative Research Executive",
-    company: "Insight Asia",
-    company_link: "https://insightasia.com/",
+    organization: "Insight Asia",
+    link: "https://insightasia.com/",
     period: "2024 — 2026",
-    description: "This is where I learned what survey data really looks like at scale — and how painful it is to process without the right tools. I owned the data side of the pipeline: from questionnaire programming through to cleaning, analysis, and dashboards. Every project had its own schema, its own quirks, its own manual steps that nobody had ever bothered to fix. That friction is what eventually became survy — a library I built to automate the parts of the workflow I found myself repeating across every single project.",
-    skills: ["Python", "Pandas", "Polars", "SPSS", "SQL", "PowerBI"]
+    description: "This is where I learned what survey data really looks like at scale — and how painful it is to process without the right tools. I owned the data side of the pipeline: from questionnaire programming through to cleaning, transforming, analysis, and dashboards. Every project had its own schema, its own quirks, its own manual steps that nobody had ever bothered to fix. That friction is what eventually became survy — a library I built to automate the parts of the workflow I found myself repeating across every single project.",
   },
   {
     role: "Data & Research Analyst",
-    company: "Deli",
-    company_link: "https://www.deliworld.com/",
+    organization: "Deli",
+    link: "https://www.deliworld.com/",
     period: "2022 — 2024",
     description: "My first job out of university. I spent two years close to the business — tracking sales performance, mapping trends across regions and product lines, and gathering ground-level feedback from sales reps, distributors, and end users to inform product decisions. It taught me how real data looks: messy, inconsistent, and nothing like textbook examples. That's also where I learned that the most valuable thing you can do with data isn't the analysis — it's removing the manual work standing between raw data and insight.",
-    skills: ["Python", "Pandas", "SQL", "PowerBI"]
   },
 ];
 
@@ -120,6 +112,6 @@ export const SKILLS = [
 export const NAV_LINKS = [
   { label: "about", href: "#about" },
   { label: "projects", href: "#projects" },
-  { label: "experiences", href: "#experiences" },
+  { label: "story", href: "#story" },
   { label: "contact", href: "#contact" },
 ];

@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm flex flex-row w-full justify-between items-center px-4 md:px-10 lg:px-20 py-3">
       <Link href="/">
-        <Image src="/icon.svg" width={20} height={20} alt="hhhao" />
+        <Image src="/icon.svg" width={30} height={30} alt="hhhao" />
       </Link>
       <div className="flex items-center gap-1">
         {NAV_LINKS.map((item) =>

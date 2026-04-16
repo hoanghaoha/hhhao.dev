@@ -1,9 +1,9 @@
 import AboutSection from "@/components/AboutSection";
-import ExperiencesSection from "@/components/ExperiencesSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/NavBar";
 import ProjectSection from "@/components/ProjectsSection";
+import StorySection from "@/components/StorySection";
 import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
@@ -17,8 +17,8 @@ export default function Page() {
       <section id="projects" className="scroll-mt-20 w-full flex justify-center">
         <ProjectSection />
       </section>
-      <section id="experiences" className="scroll-mt-20 w-full flex justify-center">
-        <ExperiencesSection />
+      <section id="story" className="scroll-mt-20 w-full flex justify-center">
+        <StorySection />
       </section>
       <Separator />
       <section id="footer" className="scroll-mt-20 w-full">
