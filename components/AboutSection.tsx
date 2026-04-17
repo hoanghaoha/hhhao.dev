@@ -1,4 +1,4 @@
-import { PROJECTS, SITE } from "@/lib/consts"
+import { PROJECTS } from "@/lib/consts"
 
 type Props = {}
 
@@ -17,9 +17,7 @@ const AboutSection = (props: Props) => {
           I don't just analyze data, I build the tools and pipelines to process it at scale.
           That mindset led me to create{" "}
           <a href={PROJECTS[0].link} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-primary hover:text-accent-foreground hover:bg-primary transition-colors">survy</a>,{" "}
-          an open source Python library for automated data process-analysis with AI-powered workflows, and{" "}
-          <a href={PROJECTS[1].link} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-primary hover:text-accent-foreground hover:bg-primary transition-colors">surveydb</a>{" "}
-          — a SQL storage engine that turns isolated survey files into a unified, queryable database.
+          an open source Python library for automated data process-analysis with AI-powered workflows.
         </p>
         <p>
           I'm drawn to problems where technical depth and research thinking both

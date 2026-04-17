@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { SITE } from "@/lib/consts"
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react"
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react"
+import EmailButton from "./EmailButton"
 
 type Props = {}
 
@@ -19,11 +20,7 @@ const Footer = (props: Props) => {
             <IconBrandLinkedin />
           </Link>
         </Button>
-        <Button asChild size={"icon"} variant={"outline"}>
-          <a href={`mailto:${SITE.email}`}>
-            <IconMail />
-          </a>
-        </Button>
+        <EmailButton size="icon" variant="outline" />
       </div>
       <a href={"https://github.com/hoanghaoha/hhhao.dev"}
         target="_blank"

@@ -2,6 +2,7 @@ import { SITE } from "@/lib/consts"
 import { Button } from "./ui/button"
 import Link from "next/link"
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react"
+import EmailButton from "./EmailButton"
 
 type Props = {}
 
@@ -24,12 +25,7 @@ const HeroSection = (props: Props) => {
             <IconBrandLinkedin />
           </Link>
         </Button>
-        <Button asChild>
-          <a href={`mailto:${SITE.email}`}>
-            Email
-            <IconMail />
-          </a>
-        </Button>
+        <EmailButton />
       </div>
     </div>
   )

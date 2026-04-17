@@ -60,14 +60,6 @@ export const PROJECTS = [
     status: "live" as const,
   },
   {
-    name: "surveydb",
-    description:
-      "A standalone Python + SQL storage engine for survey data. Ingests any project as standardized CSV files and normalizes it into a unified, queryable database — enabling cross-project analysis that was previously impossible without manual work.",
-    link: "https://github.com/hoanghaoha/surveydb",
-    tags: ["Python", "Polars", "SQL", "PowerBI", "Docker"],
-    status: "wip" as const,
-  },
-  {
     name: "hhhao.dev",
     description:
       "The site you're viewing here.",
