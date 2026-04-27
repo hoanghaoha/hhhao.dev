@@ -1,5 +1,14 @@
 import { PROJECTS } from "@/lib/consts"
 
+const TextLink = ({ text, link }: { text: string, link: string }) => {
+  return (
+    <a href={link} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-primary hover:text-accent-foreground hover:bg-primary transition-colors">
+      {text}
+    </a>
+  )
+
+}
+
 type Props = {}
 
 const AboutSection = (props: Props) => {
@@ -8,21 +17,24 @@ const AboutSection = (props: Props) => {
       <h1 className="text-3xl md:text-4xl font-semibold">About me</h1>
       <div className="space-y-4 leading-relaxed text-muted-foreground">
         <p>
-          I'm a data professional based in Ho Chi Minh City, Vietnam, with 4 years
-          of experience turning messy, complex datasets into clean insights and
-          automated workflows.
+          I'm a Data & Research Analyst and Indie Hacker based in Ho Chi Minh City, Vietnam.
         </p>
         <p>
-          My work sits at the intersection of statistical analysis and data engineering —
-          I don't just analyze data, I build the tools and pipelines to process it at scale.
-          That mindset led me to create{" "}
-          <a href={PROJECTS[0].link} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-primary hover:text-accent-foreground hover:bg-primary transition-colors">survy</a>,{" "}
-          an open source Python library for automated data process-analysis with AI-powered workflows.
+          I've spent 4 years in market research and analytics — owning pipelines, cleaning messy datasets, delivering analysis, turning noisy data into decisions.
+          Somewhere along the way I became obsessed with a different question:
+          what would it look like if working with data was actually enjoyable?
         </p>
         <p>
-          I'm drawn to problems where technical depth and research thinking both
-          matter — where the answer isn't just in the data, but in how you build
-          the system to get there.
+          That's what I build toward
+          {". "}
+          <TextLink text="survy" link="https://survy.hhhao.dev" /> automates the parts of survey data work nobody wants to do by hand
+          {" - "}
+          <span>
+            <TextLink text="querizer" link="https://querizer.vercel.app" /> makes learning SQL genuinely fun.
+          </span>
+        </p>
+        <p>
+          Still employed. Still building.
         </p>
       </div>
     </div>

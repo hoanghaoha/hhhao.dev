@@ -14,9 +14,8 @@ import { SiDocker, SiFastapi, SiGithub, SiGithubactions, SiJavascript, SiNextdot
 
 export const SITE = {
   name: "Ha Hoang Hao",
-  title: "Data & Research Analyst · Python Developer",
-  description:
-    "I analyze complex data to surface insights that drive decisions — and build tools that turn analysis into repeatable workflows.",
+  title: "Data & Research Analyst · Indie Hacker",
+  description: "I analyze data by day and build tools for people who work with it on the side.",
   email: "me@hhhao.dev",
   github: "https://github.com/hoanghaoha",
   linkedin: "https://linkedin.com/in/hoanghaoha",
@@ -52,21 +51,20 @@ export const TAG_ICONS: Record<string, AnyIcon> = {
 
 export const PROJECTS = [
   {
+    name: "querizer",
+    description: "A SaaS I built around one idea: SQL practice should actually be enjoyable.",
+    link: "https://querizer.vercel.app",
+    tags: ["AI", "SQL", "Python", "TypeScript", "Next.js", "FastAPI", "Docker", "Shadcn"],
+    status: "live" as const,
+  },
+  {
     name: "survy",
     description:
       "Open source Python library for automated survey data processing, transformation and analysis with a clean, scriptable API. Shipping with AI integration extension - enable LLM-powered data analyzing workflows using the agent skills pattern.",
     link: "https://survy.hhhao.dev",
     tags: ["Python", "Polars", "AI", "SPSS", "PyPI", "Github Actions"],
     status: "live" as const,
-  },
-  {
-    name: "hhhao.dev",
-    description:
-      "The site you're viewing here.",
-    link: "https://github.com/hoanghaoha/hhhao.dev",
-    tags: ["Next.js", "Shadcn"],
-    status: "live" as const,
-  },
+  }
 ];
 
 export const STORY = [
@@ -74,7 +72,7 @@ export const STORY = [
     role: "Quantitative Research Executive",
     organization: "Insight Asia",
     link: "https://insightasia.com/",
-    period: "2024 — 2026",
+    period: "2024 — Present",
     description: "This is where I learned what survey data really looks like at scale — and how painful it is to process without the right tools. I owned the data side of the pipeline: from questionnaire programming through to cleaning, transforming, analysis, and dashboards. Every project had its own schema, its own quirks, its own manual steps that nobody had ever bothered to fix. That friction is what eventually became survy — a library I built to automate the parts of the workflow I found myself repeating across every single project.",
   },
   {
